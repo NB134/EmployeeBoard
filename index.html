@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="EmpForm">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+    <script src="libs/ui-bootstrap-tpls-2.5.0.js" defer></script>
+    <script src="app.module.js" defer></script>
+    <script src="empData/empData.controller.js" defer></script>
+    <script src="empForm/empForm.controller.js" defer></script>
+    <script src="app.config.js" defer></script>
+    <script src="empData/model.controller.js" defer></script>
+    <title>Employee Form</title>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <h1 class="nav-heading">Coriolis</h1>
+      <ul class="nav navbar-nav">
+        <li><a href="#/!">Employee Data</a></li>
+        <li><a href="#!about">About</a></li>
+        <li><a href="#!contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="Container" ng-view></div>
+  </body>
+</html>

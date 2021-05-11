@@ -1,0 +1,17 @@
+<div class="DataContainer" >
+  <div class="control">
+    <h1 class="nav-heading">Coriolis Employee details</h1>
+    <a href="#!form">Add Empoyee</a>
+  </div>
+  <div class="CardContainer" ng-controller="ModalCtrl">
+    <div class="Card" ng-repeat="x in data">
+      <h3>{{x.Fname}}</h3>
+      <div class="details">
+        <i class="fas fa-id-card-alt"></i><span>{{x.EmpID}}</span>
+        <i class="fas fa-mobile-alt"></i><span>{{x.Contact}}</span>
+        <i class="far fa-envelope"></i><span>{{x.Email}}</span>
+      </div>
+      <button class="dtlBtn" ng-click="open($index)">More details</button>
+    </div>
+  </div>
+</div>

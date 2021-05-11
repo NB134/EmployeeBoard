@@ -1,0 +1,51 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">{{data.Fname+" "+data.Mname+" "+data.Lname}}</h3>
+</div>
+<div class="modal-body" id="modal-body">
+  <table class="table p-2  table-striped">
+    <tr>
+      <th>First Name:</th>
+      <td>{{data.Fname}}</td>
+    </tr>
+    <tr>
+      <th>Middle Name:</th>
+      <td>{{data.Mname}}</td>
+    </tr>
+    <tr>
+      <th>Last Name:</th>
+      <td>{{data.Lname}}</td>
+    </tr>
+    <tr>
+      <th>Employee ID:</th>
+      <td>{{data.EmpID}}</td>
+    </tr>
+    <tr>
+      <th>Contact:</th>
+      <td>{{data.Contact}}</td>
+    </tr>
+    <tr>
+      <th>Email:</th>
+      <td>{{data.Email}}</td>
+    </tr>
+    <tr>
+      <th>Joining Date:</th>
+      <td>{{data.Jdate | date:"dd/MM/yyyy"}}</td>
+    </tr>
+    <tr>
+      <th>Hobbies:</th>
+      <td>{{data.Hobbies}}</td>
+    </tr>
+    <tr>
+      <th>Gender:</th>
+      <td>{{data.Gender}}</td>
+    </tr>
+    <tr>
+      <th>City:</th>
+      <td>{{data.City}}</td>
+    </tr>
+  </table>
+     
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="close()">Close</button>
+</div>

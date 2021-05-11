@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Container {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  justify-content: flex-start;
+}
+.toggleBtns > button {
+  padding: 1em;
+  font-size: large;
+  border: none;
+  background-color: #424054;
+  color: white;
+  box-shadow: 0em 0em 0.2em 0em black;
+  cursor: pointer;
+}
+.formContainer {
+  display: flex;
+  height: 100%;
+  max-width: 1000px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  margin: 2em;
+  padding: 1em;
+  background-color: #404654;
+  color: aliceblue;
+  box-shadow: 0.1em 0.1em 1em 0em black;
+}
+.formContainer > h1 {
+  font-weight: 500;
+}
+.detailsForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 1em;
+}
+.detailsForm > fieldset > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  font-size: 1em;
+  justify-content: space-between;
+  flex-grow: 1;
+
+}
+.radioContainer {
+  align-self: flex-start;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1em;
+  padding: 0.5em;
+  flex-wrap: wrap;
+}
+.radioContainer > label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5em;
+  font-size: 1.3em;
+  flex-grow: 1;
+}
+
+.inputElement {
+  padding: 0.5em;
+  font-size: 1.3em;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #cab08d;
+  color: aliceblue;
+  outline: none;
+}
+fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border: none;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 1em;
+}
+textarea.inputElement {
+  /* font-size: 1.5em; */
+  font-family: inherit;
+  resize: none;
+}
+#controlBtns {
+  flex-direction: row;
+  justify-content: center;
+  gap: 1em;
+}
+input[type="submit"],
+input[type="Reset"] {
+  border: none;
+  background-color: #796f4f;
+  background-image: linear-gradient(315deg, #b8a978 0%, #796f4f 100%);
+  cursor: pointer;
+  padding: 0.5em 1em;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* DATA */
+table {
+  width: 100%;
+}
+caption {
+  font-size: large;
+  margin: 1em ;
+}
+thead th {
+  font-weight: 400;
+  background: #3e424d;
+  color: #fff;
+}
+.table>tbody>tr>td,.table>tbody>tr>th {
+  margin-bottom: 1em ;
+  cursor: pointer ;
+  padding: 1.0em ;
+  font-weight: 300;
+}
+.DataContainer{
+  display: flex;
+min-height:60vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap:2em;
+}
+.CardContainer{
+  height: 100%;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:1.5em;
+}
+
+.Card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width:300px;
+  padding:1em 2em;
+  gap:1em;
+  border-radius: 5px;
+  background:none;
+  border:2px solid #000000;
+  
+}
+.Card >h3{
+  margin:0;
+  padding:0;
+}
+.Card:hover{
+  box-shadow: 0 0.1em 0.5em 0.2em rgba(0, 0, 0, 0.274);
+  transition: box-shadow ease-in-out 0.3s;
+}
+.details{
+ display: grid;
+ grid-template-columns: 1fr auto;
+ grid-column-gap: 1em;
+ align-items: center;
+
+ /* justify-items: center; */
+}
+.details >i{
+  justify-self: center;
+}
+.dtlBtn{
+  padding:0.5em 1em;
+  background-color: maroon;
+  color:white;
+  border: none;
+  border-radius: 5px;
+}
+
+.navbar{
+  border-radius: 0 !important;
+  background-color: #000000;
+  font-size: 20px;;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color:white;
+  font-family: 'Quicksand', sans-serif;
+}
+.navbar a{
+  color:rgb(204, 200, 200);
+}
+.navbar a:focus{
+  transition: all 0.3s;
+  color:maroon;
+}
+.navbar a:hover{
+  background-color: maroon !important;
+  /* color:maroon; */
+  color:white;
+  transition: all 0.3s;
+}
+.active{
+  background: none !important;
+  
+}
+.nav-heading{
+  padding:0.5em;
+  margin:0;
+  flex:1;
+}
+.navbar>ul{
+  flex:1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right:1em;
+}
+.control{
+  display: flex;
+  gap:1em;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.control>a{
+  display: block;
+  padding:1em;
+  background-color: maroon;
+  color:white;
+  
+}
+
+.control>a:hover{
+  text-decoration:none;
+  color:white;
+}
+
+
