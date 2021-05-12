@@ -130,23 +130,23 @@ angular.module('EmpForm').controller("DataCtrl", function ($scope) {
         if($scope.searchOption==="EmpID")
         {
          
-          if(value.EmpID.toLowerCase().indexOf($scope.search)===-1)
+          if(value.EmpID.toLowerCase().indexOf($scope.search)===0)
           {
-            return false;
+            return true;
           }
           else
           {
-            return true;
+            return false;
           }
         }
         else
         { 
-          if(value.Fname.toLowerCase().indexOf($scope.search)===-1)
+          if(value.Fname.toLowerCase().indexOf($scope.search)===0)
         {
-          return false;
+          return true;
         }
         else{
-          return true;
+          return false;
         }
         }
 
