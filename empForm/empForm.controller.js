@@ -1,4 +1,4 @@
-angular.module('EmpForm').controller("FormCtrl", function ($scope, $rootScope, $location) {
+angular.module('EmpForm').controller("FormCtrl", function ($scope, $rootScope, $location, $timeout) {
     $scope.data = [];
     $scope.SubmitForm = function (e) {
       e.preventDefault();
@@ -16,7 +16,11 @@ angular.module('EmpForm').controller("FormCtrl", function ($scope, $rootScope, $
       };
       console.log($scope.Jdate);
       $scope.data.push(Userdata);
-      $rootScope.$broadcast("formData", Userdata);
+      $timeout(function(){
+        // $scope.$broadcast('someEvent', 'bidule');
+        $rootScope.$broadcast("formData", Userdata);
+     });
+      
       $location.path( "/" );
       let form = document.getElementById("eForm");
       form.reset();

@@ -1,11 +1,11 @@
 angular.module("EmpForm").config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "/empData/empData.template.html",
+        templateUrl : "./empData/empData.template.html",
         controller : "DataCtrl"
     })
     .when("/form", {
-        templateUrl : "/empForm/empForm.template.html",
+        templateUrl : "./empForm/empForm.template.html",
         controller : "FormCtrl"
     })
     .when("/about", {
