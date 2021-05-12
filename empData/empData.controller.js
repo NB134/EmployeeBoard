@@ -35,7 +35,80 @@ angular.module('EmpForm').controller("DataCtrl", function ($scope) {
         Gender: 'Female',
         City: 'Moscow',
         Jdate:'07/01/2021'
+      },
+      {
+        Fname: 'Pamella',
+        Mname: 'Cameron',
+        Lname: 'Garken',
+        EmpID: 'Emp1412',
+        Contact: '3102658247',
+        Email: 'pgarken0@salon.com',
+        Hobbies: 'Football',
+        Gender: 'Female',
+        City: 'Badian',
+        Jdate:'30/01/2018'
+      },
+      {
+        Fname: 'Kalindi',
+        Mname: 'Corran',
+        Lname: 'Paz',
+        EmpID: 'Emp1456',
+        Contact: '6543191555',
+        Email: 'kpaz0@mapy.cz',
+        Hobbies: 'Calligraphy',
+        Gender: 'Male',
+        City: 'Anyar',
+        Jdate:'08/04/2020'
+      },
+      {
+        Fname: 'Shelby',
+        Mname: 'Allwood',
+        Lname: 'Sallwood',
+        EmpID: 'Emp1765',
+        Contact: '1126359303',
+        Email: 'sallwood3@freewebs.com',
+        Hobbies: 'Cricket',
+        Gender: 'Male',
+        City: 'Mbocayaty',
+        Jdate:'11/08/2019'
+      },
+      {
+        Fname: 'Eleanora',
+        Mname: 'Corran',
+        Lname: 'Matissoff',
+        EmpID: 'Emp1235',
+        Contact: '7984100358',
+        Email: 'eleanora4@blogtalkradio.com',
+        Hobbies: 'Chess',
+        Gender: 'Female',
+        City: 'Carhué',
+        Jdate:'19/10/2018'
+      },
+      {
+        Fname: 'Herschel',
+        Mname: 'Iago',
+        Lname: 'Waylen',
+        EmpID: 'Emp1237',
+        Contact: '8706623529',
+        Email: 'hwaylen7@hc360.com',
+        Hobbies: 'Music',
+        Gender: 'Male',
+        City: 'Ciketak',
+        Jdate:'21/10/2017'
+      },
+      {
+        Fname: 'Vitoria',
+        Mname: 'Dannie',
+        Lname: 'Harriss',
+        EmpID: 'Emp1238',
+        Contact: '1755293641',
+        Email: 'vharriss8@addthis.com',
+        Hobbies: 'Music',
+        Gender: 'Female',
+        City: 'Eirol',
+        Jdate:'24/10/2017'
       }
+
 
     ];
     $scope.$on("formData", function (event, args) {
@@ -43,4 +116,40 @@ angular.module('EmpForm').controller("DataCtrl", function ($scope) {
       $scope.data.push(args);
       console.log($scope.data);
     });
+    $scope.search="";
+    $scope.searchOption="Fname";
+    $scope.counter=0;
+    $scope.searchEmp=function () {
+      return function(value)
+      { let temp=$scope.search;
+        if(temp!=undefined)
+        {
+          $scope.search=temp.toLowerCase();
+        }
+       
+        if($scope.searchOption==="EmpID")
+        {
+         
+          if(value.EmpID.toLowerCase().indexOf($scope.search)===-1)
+          {
+            return false;
+          }
+          else
+          {
+            return true;
+          }
+        }
+        else
+        { 
+          if(value.Fname.toLowerCase().indexOf($scope.search)===-1)
+        {
+          return false;
+        }
+        else{
+          return true;
+        }
+        }
+
+      }
+    }
   });
