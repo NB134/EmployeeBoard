@@ -118,7 +118,7 @@ angular.module('EmpForm').controller("DataCtrl", function ($scope) {
     });
     $scope.search="";
     $scope.searchOption="Fname";
-    $scope.counter=0;
+    // predicate function for filter
     $scope.searchEmp=function () {
       return function(value)
       { let temp=$scope.search;

@@ -5,6 +5,7 @@
       <a class="btn btn-danger" href="#!form">Add Empoyee</a>
       <form class="controlForm">
         <!-- <label for="EmpSearch">Search</label> -->
+        <div class="input-group">
         <select id="sOption" ng-model="searchOption" class="form-control">
           <option value="EmpID">
             Employee Id
@@ -13,8 +14,11 @@
             First Name
           </option>
         </select>
-        
+      </div>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
         <input type="text" ng-model="search" class="form-control" id="EmpSearch" placeholder="Search">
+      </div>
       </form>
     </div>
     
