@@ -1,17 +1,23 @@
+
 <div class="formContainer" >
-  <h1>Coriolis employee details form</h1>
+  <div class="btnContainer col-sm-12">
+    <button class="formBtn btn btn-danger btn-lg"><i class=" 	glyphicon glyphicon-circle-arrow-left"></i><a  href="#!/"> Back</a></button>
+    <h1 class="col-sm-offset-2 col-sm-8">Coriolis employee details form</h1>
+  </div>
+    
   <form
     name="DetailsForm"
     id="eForm"
-    class="detailsForm"
+    class=" form-horizontal"
     ng-submit="SubmitForm($event)"
   >
-    <fieldset>
-      <div>
-        <label for="Fname">First Name</label>
+
+      <div class="form-group">
+        <label for="Fname" class="control-label col-sm-2">First Name</label>
+        <div class="col-sm-10">
         <input
           type="text"
-          class="inputElement"
+          class="form-control"
           ng-model="Fname"
           name="Fname"
           placeholder="First Name"
@@ -19,167 +25,193 @@
           required
         />
       </div>
-      <div>
-        <label for="Mname">Middle Name</label>
-        <input
-          type="text"
-          class="inputElement"
-          ng-model="Mname"
-          name="Mname"
-          placeholder="Middle Name"
-          id="Mname"
-        />
       </div>
-      <div>
-        <label for="Lname">Last Name</label>
-        <input
-          type="text"
-          class="inputElement"
-          ng-model="Lname"
-          name="Lname"
-          placeholder="Last Name"
-          id="Lname"
-          required
-        />
+      <div class="form-group">
+        <label for="Mname" class="control-label col-sm-2">Middle Name</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            ng-model="Mname"
+            name="Mname"
+            placeholder="Middle Name"
+            id="Mname"
+          />
+        </div>
       </div>
-    </fieldset>
-    <fieldset>
-      <div>
-        <label for="EmpID">Employee ID</label>
-        <input
-          type="text"
-          class="inputElement"
-          ng-model="EmpID"
-          name="EmpID"
-          placeholder="Employee ID"
-          id="EmpID"
-          required
-        />
+      <div class="form-group">
+        <label for="Lname" class="control-label col-sm-2">Last Name</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            ng-model="Lname"
+            name="Lname"
+            placeholder="Last Name"
+            id="Lname"
+            required
+          />
+        </div>
       </div>
-      <div>
-        <label for="Contact">Contact</label>
-        <input
-          type="number"
-          class="inputElement"
-          ng-model="Contact"
-          name="Contact"
-          placeholder="Contact Number"
-          id="Contact"
-          min="1000000000"
-          max="9999999999"
-          required
-        />
 
-        <span
+    
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="EmpID">Employee ID</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            ng-model="EmpID"
+            name="EmpID"
+            placeholder="Employee ID"
+            id="EmpID"
+            required
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="Contact">Contact</label>
+        <div class="col-sm-10">
+          <input
+            type="number"
+            class="form-control"
+            ng-model="Contact"
+            name="Contact"
+            placeholder="Contact Number"
+            id="Contact"
+            min="1000000000"
+            max="9999999999"
+            required
+          />
+          <span
           class="message"
           ng-show="DetailsForm.Contact.$dirty && DetailsForm.Contact.$invalid"
           >Please enter correct number.</span
         >
-      </div>
-      <div>
-        <label for="email">Email</label>
-        <input
-          type="email"
-          class="inputElement"
-          ng-model="Email"
-          name="Email"
-          placeholder="Email"
-          id="email"
-          required
-        />
+        </div>
 
-        <span
+        
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="email">Email</label>
+        <div class="col-sm-10">
+          <input
+            type="email"
+            class="form-control"
+            ng-model="Email"
+            name="Email"
+            placeholder="Email"
+            id="email"
+            required
+          />
+          <span
           class="message"
           ng-show="DetailsForm.Email.$dirty && DetailsForm.Email.$invalid"
           >Please enter email in correct format.</span
         >
+        </div>
+
+        
       </div>
-    </fieldset>
-    <fieldset>
-      <div>
-        <label for="date">Joining Date</label>
-        <input
-          type="date"
-          class="inputElement"
-          ng-model="Jdate"
-          name="Jdate"
-          placeholder="City"
-          id="date"
-          required
-        />
-      </div>
-      <div>
-        <label>Gender</label>
-
-        <div class="radioContainer">
-          <label for="male"
-            ><input
-              type="radio"
-              ng-model="Gender"
-              name="Gender"
-              id="male"
-              value="Male"
-              default
-              required
-            />
-            Male</label
-          >
-
-          <label for="female"
-            ><input
-              type="radio"
-              ng-model="Gender"
-              name="Gender"
-              id="female"
-              value="Female"
-              required
-            />
-            Female</label
-          >
-
-          <label for="other"
-            ><input
-              type="radio"
-              ng-model="Gender"
-              name="Gender"
-              id="other"
-              value="Other"
-              required
-            />
-            Other</label
-          >
+    
+    
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="date">Joining Date</label>
+        <div class="col-sm-10">
+          <input
+            type="date"
+            class="form-control"
+            ng-model="Jdate"
+            name="Jdate"
+            placeholder="City"
+            id="date"
+            required
+          />
         </div>
       </div>
-      <div>
-        <label for="city">City</label>
-        <input
-          type="text"
-          class="inputElement"
-          ng-model="City"
-          name="City"
-          placeholder="City"
-          id="city"
-          required
-        />
+      <div class="form-group">
+        <label class="control-label col-sm-2">Gender</label>
+
+        <div class="col-sm-10">
+          <div class="radio">
+            <label class="" for="male"
+              ><input
+                type="radio"
+                ng-model="Gender"
+                name="Gender"
+                id="male"
+                value="Male"
+                default
+                required
+              />
+              Male</label
+            >
+          </div>
+
+          <div class="radio">
+            <label class="" for="female"
+              ><input
+                type="radio"
+                ng-model="Gender"
+                name="Gender"
+                id="female"
+                value="Female"
+                required
+              />
+              Female</label
+            >
+          </div>
+
+          <div class="radio">
+            <label class="" for="other"
+              ><input
+                type="radio"
+                ng-model="Gender"
+                name="Gender"
+                id="other"
+                value="Other"
+                required
+              />
+              Other</label
+            >
+          </div>
+        </div>
       </div>
-    </fieldset>
-    <fieldset>
-      <div>
-        <label for="hobbies">Hobbies</label>
-        <textarea
-          class="inputElement"
-          ng-model="Hobbies"
-          name="Hobbies"
-          placeholder="Hobbies"
-          id="hobbies"
-        ></textarea>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="city">City</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            ng-model="City"
+            name="City"
+            placeholder="City"
+            id="city"
+            required
+          />
+        </div>
       </div>
-    </fieldset>
-    <fieldset>
-      <div id="controlBtns">
-        <input type="submit" class="inputElement" value="Submit" />
-        <input type="reset" class="inputElement" value="Reset" />
+    
+    
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="hobbies">Hobbies</label>
+        <div class="col-sm-10">
+          <textarea
+            class="form-control"
+            ng-model="Hobbies"
+            name="Hobbies"
+            placeholder="Hobbies"
+            id="hobbies"
+          ></textarea>
+        </div>
       </div>
-    </fieldset>
+    
+    <div class="form-group">
+      <div class="FormBtns col-sm-offset-2 col-sm-10">
+        <input type="submit" class="btn btn-danger btn-lg" value="Submit" />
+        <input type="reset" class="btn btn-danger btn-lg" value="Cancel" />
+      </div>
+    </div>
+    
   </form>
 </div>

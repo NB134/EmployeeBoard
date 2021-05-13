@@ -22,20 +22,7 @@
   box-shadow: 0em 0em 0.2em 0em black;
   cursor: pointer;
 }
-.formContainer {
-  display: flex;
-  height: 100%;
-  max-width: 1000px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 1em;
-  margin: 2em;
-  padding: 1em;
-  background-color: #404654;
-  color: aliceblue;
-  box-shadow: 0.1em 0.1em 1em 0em black;
-}
+
 .formContainer > h1 {
   font-weight: 500;
 }
@@ -102,15 +89,51 @@ textarea.inputElement {
   justify-content: center;
   gap: 1em;
 }
-input[type="submit"],
-input[type="Reset"] {
+/* input[type="submit"],
+input[type="Reset"],.formBtn {
   border: none;
   background-color: #796f4f;
   background-image: linear-gradient(315deg, #b8a978 0%, #796f4f 100%);
   cursor: pointer;
   padding: 0.5em 1em;
+} */
+.formBtn>a{
+  text-decoration: none !important;
+  text-align: center;
+  color:white;
 }
-
+.formContainer>h1{
+  text-align: center;
+  margin:0;
+  margin-bottom: 1em;
+}
+.formContainer{
+  width:100%;
+  padding:1em;
+  font-size: large;
+  font-family: 'Quicksand', sans-serif;
+}
+.formContainer input{
+  font-size: large;
+}
+.btnContainer{
+  display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+ padding-bottom: 1em;;
+}
+.btnContainer>h1{
+  margin-top:0;
+  margin-bottom:0;;
+}
+.formBtn>a:hover{
+  color:white;
+}
+.FormBtns > .btn,.formBtn{
+  background-color: maroon !important;
+  color: white;
+  border: none !important;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -227,7 +250,15 @@ thead th {
 }
 .active{
   background: none !important;
-  
+}
+.nav-heading>a:focus{
+  color:white ;
+  text-decoration: none;
+}
+.nav-heading>a:hover{
+  color:white ;
+  background-color: transparent !important;
+  text-decoration: none;
 }
 .nav-heading,.heading{
   padding:0.5em;
